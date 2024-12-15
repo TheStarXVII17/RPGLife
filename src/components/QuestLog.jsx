@@ -1,32 +1,26 @@
-import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { UserContext } from "./UserContext";
+import "./styles.css";
 
 const QuestLog = () => {
-    const location = useLocation();
-    const navigate = useNavigate();
-    const [completed, setCompleted] = useState(false);
-
-    const quest = location.state?.quest;
-
-    if (!quest) {
-        return <p>No quest accepted. Please visit the Quest Manager.</p>;
-    }
-
-    const handleMarkComplete = () => {
-        setCompleted(true);
-    };
+    const { acceptedQuests, completeQuest } = useContext(UserContext);
 
     return (
         <div className="quest-log">
             <h1>Quest Log</h1>
-            <h2>{quest.name}</h2>
-            <p>Task: {quest.task}</p>
-            <p>Status: {completed ? "Completed" : "In Progress"}</p>
-            {!completed && (
-                <button onClick={handleMarkComplete}>Mark as Completed</button>
+            {acceptedQuests.length > 0 ? (
+                <ul>
+                    {acceptedQuests.map((quest, index) => (
+                        <li key={index} className="quest-log-item">
+                            <p>{quest.description}</p>
+                            <p>Fitness Routine: {quest.routine}</p>
+                            <button onClick={() => completeQuest(index)}>Mark as Completed</button>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No active quests. Accept a quest from the Quest Manager!</p>
             )}
-            {completed && <p>Congratulations on completing your quest!</p>}
-            <button onClick={() => navigate("/dashboard")}>Back to Dashboard</button>
         </div>
     );
 };
