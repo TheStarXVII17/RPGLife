@@ -14,15 +14,6 @@ export const UserProvider = ({ children }) => {
     setUser((prevUser) => ({ ...prevUser, ...newUser }));
   };
 
-  // Function to reduce HP and MP
-  const reduceStats = () => {
-    setUser((prevUser) => ({
-      ...prevUser,
-      hp: Math.max(0, prevUser.hp - Math.floor(Math.random() * 5)), // Reduce HP by a random value (0-5)
-      mp: Math.max(0, prevUser.mp - Math.floor(Math.random() * 5)), // Reduce MP by a random value (0-5)
-    }));
-  };
-
   const [acceptedQuests, setAcceptedQuests] = useState([]);
 
   const addQuest = (quest) => {
@@ -35,7 +26,7 @@ export const UserProvider = ({ children }) => {
 
 
   return (
-    <UserContext.Provider value={{ user, updateUser, reduceStats, acceptedQuests, addQuest, completeQuest }}>
+    <UserContext.Provider value={{ user, updateUser, acceptedQuests, addQuest, completeQuest }}>
     {children}
   </UserContext.Provider>
   );
