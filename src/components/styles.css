@@ -1,0 +1,364 @@
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background: url('./background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Login/Register Page */
+.login-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9); /* Add a slight background for better readability */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+    .login-register h1 {
+        font-size: 3rem;
+        color: #333;
+    }
+
+    .login-register p {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .login-register .form {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .login-register input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .login-register button {
+        width: 100%;
+        padding: 12px;
+        background: #4caf50;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .login-register button:hover {
+            background: #45a049;
+        }
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9); /* Slight background */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+    .dashboard h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .dashboard .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .dashboard button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .dashboard button:hover {
+            background: #45a049;
+        }
+
+.logout-button {
+    background: #d9534f;
+}
+
+    .logout-button:hover {
+        background: #c9302c;
+    }
+
+/* Profile Header */
+.profile-header h2 {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #333333; /* Black-grayish color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for contrast */
+    margin: 10px 0; /* Add spacing if needed */
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.stat label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.health-bar,
+.mana-bar {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.health-bar-fill {
+    height: 100%;
+    background: #4caf50;
+}
+
+.mana-bar-fill {
+    height: 100%;
+    background: #2196f3;
+}
+
+/* Profile Page */
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        color: #333;
+    }
+
+.profile-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.save-button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .save-button:hover {
+        background: #45a049;
+    }
+.quests-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.quest-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.current-quest {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.generate-quest-button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.generate-quest-button:hover {
+    background: #45a049;
+}
+/* Quest Page */
+.quests-page {
+    display: flex;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.quest-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.current-quest {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.generate-quest-button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.generate-quest-button:hover {
+    background: #45a049;
+}
+
+.quest-manager, .quest-log {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.quest-manager h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+.quest-manager .quest-manager-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.quest-log-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.quest-log-item button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.quest-log-item button:hover {
+    background: #45a049;
+}
+
+.quest-manager button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.quest-manager button:hover {
+    background: #45a049;
+}
+
+.quest-manager .reroll-button {
+    background: #f0ad4e; /* Different color for the reroll button */
+}
+
+.quest-manager .reroll-button:hover {
+    background: #ec971f; /* Darker hover color for reroll */
+}
+
